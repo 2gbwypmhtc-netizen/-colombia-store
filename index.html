@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>COLOMBIA_STORE</title>
+<meta name="description" content="COLOMBIA_STORE — premium fashion, new collections and limited editions.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav">
+  <button class="menu-btn" id="menuBtn">☰ <span data-i18n="menu">Menu</span></button>
+  <a class="logo" href="#home">COLOMBIA_STORE</a>
+  <button class="cart-btn" id="cartBtn">🛒 <span id="cartCount">0</span></button>
+</header>
+
+<aside class="drawer" id="drawer">
+  <button class="close" id="closeDrawer">×</button>
+  <h2>COLOMBIA_STORE</h2>
+  <nav>
+    <a href="#home" data-i18n="home">Home | الرئيسية</a>
+    <a href="#collection/new" data-i18n="new">New Collection | المجموعة الجديدة</a>
+    <a href="#collection/summer" data-i18n="summer">Summer Collection | المجموعة الصيفية</a>
+    <a href="#collection/classic" data-i18n="classic">Classic Collection | المجموعة الكلاسيكية</a>
+    <a href="#collection/bestsellers" data-i18n="best">Best Sellers | الأكثر مبيعًا</a>
+    <a href="#collection/limited" data-i18n="limited">Limited Edition | الإصدار المحدود</a>
+    <a href="#track" data-i18n="track">Track Order | تتبع الطلب</a>
+    <button id="langBtn">العربية / English</button>
+  </nav>
+</aside>
+<div class="shade" id="shade"></div>
+
+<main id="app"></main>
+
+<div class="modal" id="productModal">
+  <div class="modal-card">
+    <button class="close" id="closeModal">×</button>
+    <img id="modalImg" alt="">
+    <div>
+      <p class="eyebrow" id="modalCollection"></p>
+      <h2 id="modalName"></h2>
+      <p id="modalDesc"></p>
+      <strong id="modalPrice"></strong>
+      <label>Size / المقاس
+        <select id="modalSize">
+          <option>M</option><option>L</option><option>XL</option><option>XXL</option>
+        </select>
+      </label>
+      <button class="primary" id="addBtn">Add to Cart | أضف للسلة</button>
+    </div>
+  </div>
+</div>
+
+<div class="cart" id="cartPanel">
+  <button class="close" id="closeCart">×</button>
+  <h2>Cart | السلة</h2>
+  <div id="cartItems"></div>
+  <div class="cart-total">Total: <strong id="cartTotal">EGP 0</strong></div>
+  <button class="primary" id="checkoutBtn">Checkout | إتمام الطلب</button>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
