@@ -2,39 +2,70 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>COLOMBIA_STORE</title>
-<meta name="description" content="COLOMBIA_STORE — premium fashion, new collections and limited editions.">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>COLOMBIA STORE</title>
+<meta name="description" content="COLOMBIA STORE — premium streetwear collections.">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header class="nav">
-  <button class="menu-btn" id="menuBtn">☰ <span data-i18n="menu">Menu</span></button>
-  <a class="logo" href="#home">COLOMBIA_STORE</a>
-  <button class="cart-btn" id="cartBtn">🛒 <span id="cartCount">0</span></button>
+  <button class="icon-btn" id="menuBtn" aria-label="Open menu">☰</button>
+  <a class="brand" href="#home" aria-label="Colombia Store home">
+    <span class="brand-mark">CS</span>
+    <span>COLOMBIA STORE</span>
+  </a>
+  <div class="nav-actions">
+    <button class="icon-btn" id="searchBtn" aria-label="Search">⌕</button>
+    <a class="icon-btn" href="#account" aria-label="Account">◯</a>
+    <button class="icon-btn" id="cartBtn" aria-label="Cart">🛒<span class="badge" id="cartCount">0</span></button>
+  </div>
 </header>
 
-<aside class="drawer" id="drawer">
-  <button class="close" id="closeDrawer">×</button>
-  <h2>COLOMBIA_STORE</h2>
-  <nav><a href="#home" data-i18n="home">Home | الرئيسية</a>
-<a href="#collection/new" data-i18n="new">New Collection ✨🔥 | المجموعة الجديدة ✨🔥</a>
-<a href="#collection/summer" data-i18n="summer">Summer Collection ☀️🌴 | المجموعة الصيفية ☀️🌴</a>
-<a href="#collection/classic" data-i18n="classic">Classic Collection 👕🖤 | المجموعة الكلاسيكية 👕🖤</a>
-<a href="#collection/bestsellers" data-i18n="best">Best Sellers 🔥⭐ | الأكثر مبيعًا 🔥⭐</a>
-<a href="#collection/limited" data-i18n="limited">Limited Edition 💎✨ | الإصدار المحدود 💎✨</a>
-<a href="#track" data-i18n="track">Track Order 📦🚚 | تتبع الطلب 📦🚚</a>
-<button id="langBtn">العربية / English</button>
+<aside class="drawer" id="drawer" aria-hidden="true">
+  <button class="close" id="closeDrawer" aria-label="Close menu">×</button>
+  <div class="drawer-brand"><span class="brand-mark">CS</span><b>COLOMBIA STORE</b></div>
+  <p class="drawer-label">COLLECTIONS</p>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#collection/new">✨🔥 New Collection</a>
+    <a href="#collection/summer">☀️🌴 Summer Collection</a>
+    <a href="#collection/classic">👕🖤 Classic Collection</a>
+    <a href="#collection/bestsellers">🔥⭐ Best Sellers</a>
+    <a href="#collection/limited">💎✨ Limited Edition</a>
+  </nav>
+  <p class="drawer-label">CUSTOMER</p>
+  <nav>
+    <a href="#track">📦 Track Order</a>
+    <a href="#account">👤 Account</a>
+  </nav>
 </aside>
 <div class="shade" id="shade"></div>
 
+<div class="search-panel" id="searchPanel">
+  <div class="search-inner">
+    <button class="close" id="closeSearch" aria-label="Close search">×</button>
+    <p class="eyebrow">COLOMBIA STORE</p>
+    <h2>Search</h2>
+    <input class="input" id="searchInput" placeholder="Search product, color or collection">
+    <div id="searchResults" class="search-results"></div>
+  </div>
+</div>
+
 <main id="app"></main>
+
+<nav class="bottom-nav" aria-label="Main navigation">
+  <a href="#home"><span>⌂</span><small>Home</small></a>
+  <a href="#collection/new"><span>▦</span><small>Collections</small></a>
+  <a class="home-orb" href="#home" aria-label="Colombia Store"><span>CS</span></a>
+  <a href="#account"><span>◯</span><small>Account</small></a>
+  <a href="#track"><span>⌁</span><small>Track</small></a>
+</nav>
 
 <div class="modal" id="productModal">
   <div class="modal-card">
     <button class="close" id="closeModal">×</button>
     <img id="modalImg" alt="">
-    <div>
+    <div class="modal-copy">
       <p class="eyebrow" id="modalCollection"></p>
       <h2 id="modalName"></h2>
       <p id="modalDesc"></p>
@@ -44,17 +75,19 @@
           <option>M</option><option>L</option><option>XL</option><option>XXL</option>
         </select>
       </label>
-      <button class="primary" id="addBtn">Add to Cart | أضف للسلة</button>
+      <button class="primary" id="addBtn">Add to Cart</button>
+      <button class="primary outline" id="buyBtn">BUY NOW</button>
     </div>
   </div>
 </div>
 
 <div class="cart" id="cartPanel">
   <button class="close" id="closeCart">×</button>
-  <h2>Cart | السلة</h2>
+  <p class="eyebrow">COLOMBIA STORE</p>
+  <h2>Cart</h2>
   <div id="cartItems"></div>
   <div class="cart-total">Total: <strong id="cartTotal">EGP 0</strong></div>
-  <button class="primary" id="checkoutBtn">Checkout | إتمام الطلب</button>
+  <button class="primary" id="checkoutBtn">BUY NOW</button>
 </div>
 
 <script src="app.js"></script>
