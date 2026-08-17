@@ -1,10 +1,86 @@
-<!doctype html><html lang="ar" dir="rtl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>COLOMBIA_STORE | New Collection</title><link rel="stylesheet" href="style.css"></head><body>
-<header><a class="brand" href="#home"><img src="colombia-logo.png" alt="COLOMBIA_STORE"><b>COLOMBIA_STORE</b></a><nav><a href="#home">الرئيسية</a><a href="#collection">الكوليكشن</a><a href="#about">عن المتجر</a><a href="#contact">تواصل معنا</a></nav><button class="menu">☰</button></header>
-<main><section id="home" class="hero"><div><small>COLOMBIA_STORE</small><h1>NEW<br>COLLECTION</h1><p>أحدث التيشيرتات المستوردة بخامات مميزة وتصميمات مختارة بعناية.</p><a class="btn" href="#collection">اكتشف الكوليكشن</a></div></section>
-<section id="collection" class="section"><div class="intro"><small>OUR COLLECTION</small><h2>أحدث الكوليكشن</h2><p>اختار القطعة المناسبة ليك واستمتع بتجربة شراء بسيطة وسريعة.</p></div><div class="products">
-<article><div class="pic">PRODUCT IMAGE</div><div class="info"><small>NEW COLLECTION</small><h3>Oversized T-Shirt</h3><p>M / L / XL / XXL</p><strong>350 EGP</strong></div></article>
-<article><div class="pic">PRODUCT IMAGE</div><div class="info"><small>IMPORTED</small><h3>Classic T-Shirt</h3><p>M / L / XL / XXL</p><strong>350 EGP</strong></div></article>
-<article><div class="pic">PRODUCT IMAGE</div><div class="info"><small>LIMITED</small><h3>Premium T-Shirt</h3><p>M / L / XL / XXL</p><strong>350 EGP</strong></div></article></div></section>
-<section id="about" class="about section"><div><small>COLOMBIA_STORE</small><h2>ستايلك يبدأ من هنا</h2><p>متجر متخصص في الملابس الرجالي المستوردة، مع اهتمام بالتفاصيل والخامة وتجربة العميل.</p></div><div class="features"><div>✓ خامات ممتازة</div><div>✓ مقاسات متعددة</div><div>✓ شحن لجميع محافظات مصر</div><div>✓ خدمة ما بعد البيع</div></div></section>
-<section id="contact" class="contact section"><small>CONTACT</small><h2>اطلب دلوقتي</h2><p>للطلب أو الاستفسار تواصل معنا على صفحاتنا.</p><div class="socials"><a href="#">Instagram</a><a href="#">Facebook</a><a href="#">TikTok</a></div></section></main>
-<footer>© 2026 COLOMBIA_STORE <span>Imported Fashion • Egypt</span></footer><script src="app.js"></script></body></html>
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>COLOMBIA STORE</title>
+<meta name="theme-color" content="#0b0b0b">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+<header class="topbar">
+  <button class="icon-btn" id="menuBtn" aria-label="Menu">☰</button>
+  <a class="logo-wrap" href="#home"><img src="assets/logo.png" class="logo" alt="Colombia Store"></a>
+  <div class="top-actions">
+    <button class="icon-btn" id="searchBtn" aria-label="Search">⌕</button>
+    <button class="icon-btn" id="wishBtn" aria-label="Wishlist">♡</button>
+    <button class="cart-btn" id="cartBtn" aria-label="Cart">♧<span id="cartCount">2</span></button>
+  </div>
+</header>
+
+<div class="side-menu" id="sideMenu">
+  <div class="drawer-head"><b>COLOMBIA STORE</b><button id="closeMenu">×</button></div>
+  <a href="#home">الرئيسية</a><a href="#collections">الكوليكشن</a><a href="#best">Best Sellers</a><a href="#track">تتبع الطلب</a><a href="#account">الحساب</a>
+</div>
+
+<main id="home">
+<section class="hero">
+  <img src="assets/hero.jpg" alt="New Collection">
+  <div class="hero-shade"></div>
+  <div class="hero-copy">
+    <div class="new-tag">NEW</div>
+    <h1>COLLECTION</h1>
+    <p>PREMIUM IMPORTED WEAR</p>
+    <div class="flag-stars">★ <i>★</i> <b>★</b></div>
+    <button class="yellow-btn" onclick="document.querySelector('#best').scrollIntoView({behavior:'smooth'})">SHOP NOW <span>→</span></button>
+  </div>
+  <div class="dots"><b></b><i></i><i></i><i></i></div>
+</section>
+
+<section id="collections" class="section">
+  <div class="section-title"><h2>SHOP BY COLLECTION</h2><a href="#collections">View All →</a></div>
+  <div class="collection-row">
+    <button class="collection-card" data-cat="New"><img src="assets/collection-new.jpg"><span>NEW</span><small>Collection</small></button>
+    <button class="collection-card" data-cat="Summer"><img src="assets/collection-summer.jpg"><span>SUMMER</span><small>Collection</small></button>
+    <button class="collection-card" data-cat="Classic"><img src="assets/collection-classic.jpg"><span>CLASSIC</span><small>Collection</small></button>
+    <button class="collection-card" data-cat="Best Sellers"><img src="assets/collection-best.jpg"><span>BEST<br>SELLERS</span><small>Collection</small></button>
+    <button class="collection-card" data-cat="Limited"><img src="assets/collection-limited.jpg"><span>LIMITED</span><small>Edition</small></button>
+  </div>
+</section>
+
+<section id="best" class="section best-section">
+  <div class="section-title"><h2>BEST SELLERS 🔥</h2><a href="#best">View All →</a></div>
+  <div class="products">
+    <article class="product" data-name="Prada Figure Tee" data-price="350">
+      <div class="product-image"><img src="assets/product-prada.jpg"><span class="badge red">Best Seller</span><button class="heart">♡</button></div>
+      <div class="product-body"><h3>Prada Figure Tee</h3><strong>EGP 350</strong><div class="sizes"><button>M</button><button>L</button><button>XL</button><button>XXL</button></div><button class="buy" onclick="addToCart('Prada Figure Tee',350)">♧ &nbsp; BUY NOW</button></div>
+    </article>
+    <article class="product" data-name="Amiri Drip Tee" data-price="350">
+      <div class="product-image"><img src="assets/product-amiri.jpg"><span class="badge yellow">New</span><button class="heart">♡</button></div>
+      <div class="product-body"><h3>Amiri Drip Tee</h3><strong>EGP 350</strong><div class="sizes"><button>M</button><button>L</button><button>XL</button><button>XXL</button></div><button class="buy" onclick="addToCart('Amiri Drip Tee',350)">♧ &nbsp; BUY NOW</button></div>
+    </article>
+  </div>
+</section>
+
+<section class="benefits">
+  <div><b>🚚</b><span>FAST DELIVERY<small>Across Egypt</small></span></div>
+  <div><b>📦</b><span>TRACK ORDER<small>Live Updates</small></span></div>
+  <div><b>🛡</b><span>SECURE PAYMENT<small>Cash / Vodafone Cash</small></span></div>
+  <div><b>★</b><span>CUSTOMER REVIEWS<small>Real Feedback</small></span></div>
+</section>
+</main>
+
+<div class="modal" id="searchModal"><div class="modal-box"><button class="close">×</button><h2>Search</h2><input id="searchInput" placeholder="ابحث عن منتج..."><div id="searchResults"></div></div></div>
+<div class="modal" id="cartModal"><div class="modal-box"><button class="close">×</button><h2>Cart</h2><div id="cartItems"></div><div class="total">Total: <b id="cartTotal">0</b> EGP</div><button class="yellow-btn full">CHECKOUT</button></div></div>
+
+<nav class="bottom-nav">
+  <a href="#home" class="active"><span>⌂</span><small>Home</small></a>
+  <a href="#collections"><span>▦</span><small>Categories</small></a>
+  <a href="#home" class="center-logo"><img src="assets/logo.png"></a>
+  <a href="#track"><span>□</span><small>Orders</small></a>
+  <a href="#account"><span>●</span><small>Account</small></a>
+</nav>
+
+<script src="app.js"></script>
+</body></html>

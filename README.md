@@ -1,3 +1,1 @@
-COLOMBIA_STORE — Premium Fashion Store
-الملفات جاهزة للرفع على GitHub Pages أو أي استضافة ثابتة.
-اللوجو المستخدم هو اللوجو الجديد المرفق باسم colombia-logo.png.
+Colombia Store — mobile-first storefront recreated from the supplied reference screenshot. Assets are cropped from the user-provided reference image and the supplied new logo is used.
