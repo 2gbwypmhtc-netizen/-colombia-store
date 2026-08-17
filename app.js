@@ -31,10 +31,10 @@ function home(){
  </section>
  <section class="section">
    <div class="section-head"><div><p class="eyebrow">Explore</p><h2>Collections</h2></div></div>
-   <div class="grid">${["new","summer","classic","bestsellers","limited"].map(c=>`
-    <article class="card" onclick="location.hash='collection/${c}'">
+   <div class="collection-rail">${["new","summer","classic","bestsellers","limited"].map(c=>`
+    <article class="collection-card" onclick="location.hash='collection/${c}'">
       <img src="${products.find(p=>p.collection===c)?.img||products[0].img}" alt="${title(c)}">
-      <div class="card-info"><h3>${emojiTitle(c)}</h3><span>Explore →</span></div>
+      <div class="ccopy"><h3>${emojiTitle(c)}</h3><p>Explore →</p><div class="accent-line"></div></div>
     </article>`).join("")}</div>
  </section>
  <section class="section">

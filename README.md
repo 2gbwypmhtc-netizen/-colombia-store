@@ -1,3 +1,3 @@
-# Colombia Store — Mobile First v1
+# Colombia Store — Mobile First v2
 
-Premium mobile-first prototype with optional Login/Create Account/Guest flow, Track Order, smart product search, collections, wishlist/account navigation placeholders, and the existing starter product data.
+Premium mobile-first refinement: real supplied logo asset, horizontal collection rail, cinematic hero video slot (upload `hero.mp4` to the repository), account guest flow, track order, search and cart prototype.

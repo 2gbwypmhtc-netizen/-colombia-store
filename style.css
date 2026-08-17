@@ -82,3 +82,27 @@ body{padding-bottom:0}
 .grid{grid-template-columns:repeat(4,1fr);gap:18px}
 }
 @media(max-width:700px){.modal-card{grid-template-columns:1fr}.modal-card img{max-height:48vh;object-fit:cover}}
+
+/* Colombia Store v2 — premium mobile-first refinements */
+.brand-logo{width:40px;height:40px;object-fit:contain;border-radius:50%}
+.drawer-logo{width:48px;height:48px;object-fit:contain;border-radius:50%}
+.hero-media{background:#050505}
+.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.9}
+.hero-fallback{position:absolute;inset:0;background:
+ radial-gradient(circle at 75% 30%,#e7c84b22,transparent 25%),
+ radial-gradient(circle at 25% 70%,#174da622,transparent 25%),
+ linear-gradient(120deg,#050505,#171717 55%,#050505)}
+.hero-content{padding-bottom:52px}
+.hero h1{font-weight:900;letter-spacing:-3px;text-shadow:0 4px 24px #000}
+.hero .primary{min-width:165px;text-align:center}
+.collection-rail{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;padding:2px 2px 10px;-webkit-overflow-scrolling:touch}
+.collection-rail::-webkit-scrollbar{display:none}
+.collection-card{position:relative;flex:0 0 145px;scroll-snap-align:start;aspect-ratio:3/4;background:#111;overflow:hidden;border:1px solid #282828}
+.collection-card img{width:100%;height:100%;object-fit:cover;opacity:.78}
+.collection-card:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#000d,transparent 60%)}
+.collection-card .ccopy{position:absolute;z-index:2;left:12px;right:8px;bottom:12px;color:#fff}
+.collection-card h3{margin:0;font-size:14px;line-height:1.1}
+.collection-card p{margin:5px 0 0;color:#ddd;font-size:10px}
+.accent-line{width:38px;height:3px;background:linear-gradient(90deg,#e7c84b,#174da6,#c91d2e);margin:12px 0 0}
+.home-orb{background:#0b0b0b!important;border-color:#fff!important;overflow:hidden}
+.home-orb img{width:100%;height:100%;object-fit:cover;border-radius:50%}
