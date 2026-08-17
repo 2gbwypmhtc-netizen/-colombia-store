@@ -1,86 +1,95 @@
 <!doctype html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>COLOMBIA STORE</title>
-<meta name="theme-color" content="#0b0b0b">
+<meta name="description" content="COLOMBIA STORE — premium streetwear collections.">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="app">
-<header class="topbar">
-  <button class="icon-btn" id="menuBtn" aria-label="Menu">☰</button>
-  <a class="logo-wrap" href="#home"><img src="assets/logo.png" class="logo" alt="Colombia Store"></a>
-  <div class="top-actions">
+<header class="nav">
+  <button class="icon-btn" id="menuBtn" aria-label="Open menu">☰</button>
+  <a class="brand" href="#home" aria-label="Colombia Store home">
+    <span class="brand-mark">CS</span>
+    <span>COLOMBIA STORE</span>
+  </a>
+  <div class="nav-actions">
     <button class="icon-btn" id="searchBtn" aria-label="Search">⌕</button>
-    <button class="icon-btn" id="wishBtn" aria-label="Wishlist">♡</button>
-    <button class="cart-btn" id="cartBtn" aria-label="Cart">♧<span id="cartCount">2</span></button>
+    <a class="icon-btn" href="#account" aria-label="Account">◯</a>
+    <button class="icon-btn" id="cartBtn" aria-label="Cart">🛒<span class="badge" id="cartCount">0</span></button>
   </div>
 </header>
 
-<div class="side-menu" id="sideMenu">
-  <div class="drawer-head"><b>COLOMBIA STORE</b><button id="closeMenu">×</button></div>
-  <a href="#home">الرئيسية</a><a href="#collections">الكوليكشن</a><a href="#best">Best Sellers</a><a href="#track">تتبع الطلب</a><a href="#account">الحساب</a>
+<aside class="drawer" id="drawer" aria-hidden="true">
+  <button class="close" id="closeDrawer" aria-label="Close menu">×</button>
+  <div class="drawer-brand"><span class="brand-mark">CS</span><b>COLOMBIA STORE</b></div>
+  <p class="drawer-label">COLLECTIONS</p>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#collection/new">✨🔥 New Collection</a>
+    <a href="#collection/summer">☀️🌴 Summer Collection</a>
+    <a href="#collection/classic">👕🖤 Classic Collection</a>
+    <a href="#collection/bestsellers">🔥⭐ Best Sellers</a>
+    <a href="#collection/limited">💎✨ Limited Edition</a>
+  </nav>
+  <p class="drawer-label">CUSTOMER</p>
+  <nav>
+    <a href="#track">📦 Track Order</a>
+    <a href="#account">👤 Account</a>
+  </nav>
+</aside>
+<div class="shade" id="shade"></div>
+
+<div class="search-panel" id="searchPanel">
+  <div class="search-inner">
+    <button class="close" id="closeSearch" aria-label="Close search">×</button>
+    <p class="eyebrow">COLOMBIA STORE</p>
+    <h2>Search</h2>
+    <input class="input" id="searchInput" placeholder="Search product, color or collection">
+    <div id="searchResults" class="search-results"></div>
+  </div>
 </div>
 
-<main id="home">
-<section class="hero">
-  <img src="assets/hero.jpg" alt="New Collection">
-  <div class="hero-shade"></div>
-  <div class="hero-copy">
-    <div class="new-tag">NEW</div>
-    <h1>COLLECTION</h1>
-    <p>PREMIUM IMPORTED WEAR</p>
-    <div class="flag-stars">★ <i>★</i> <b>★</b></div>
-    <button class="yellow-btn" onclick="document.querySelector('#best').scrollIntoView({behavior:'smooth'})">SHOP NOW <span>→</span></button>
-  </div>
-  <div class="dots"><b></b><i></i><i></i><i></i></div>
-</section>
+<main id="app"></main>
 
-<section id="collections" class="section">
-  <div class="section-title"><h2>SHOP BY COLLECTION</h2><a href="#collections">View All →</a></div>
-  <div class="collection-row">
-    <button class="collection-card" data-cat="New"><img src="assets/collection-new.jpg"><span>NEW</span><small>Collection</small></button>
-    <button class="collection-card" data-cat="Summer"><img src="assets/collection-summer.jpg"><span>SUMMER</span><small>Collection</small></button>
-    <button class="collection-card" data-cat="Classic"><img src="assets/collection-classic.jpg"><span>CLASSIC</span><small>Collection</small></button>
-    <button class="collection-card" data-cat="Best Sellers"><img src="assets/collection-best.jpg"><span>BEST<br>SELLERS</span><small>Collection</small></button>
-    <button class="collection-card" data-cat="Limited"><img src="assets/collection-limited.jpg"><span>LIMITED</span><small>Edition</small></button>
-  </div>
-</section>
-
-<section id="best" class="section best-section">
-  <div class="section-title"><h2>BEST SELLERS 🔥</h2><a href="#best">View All →</a></div>
-  <div class="products">
-    <article class="product" data-name="Prada Figure Tee" data-price="350">
-      <div class="product-image"><img src="assets/product-prada.jpg"><span class="badge red">Best Seller</span><button class="heart">♡</button></div>
-      <div class="product-body"><h3>Prada Figure Tee</h3><strong>EGP 350</strong><div class="sizes"><button>M</button><button>L</button><button>XL</button><button>XXL</button></div><button class="buy" onclick="addToCart('Prada Figure Tee',350)">♧ &nbsp; BUY NOW</button></div>
-    </article>
-    <article class="product" data-name="Amiri Drip Tee" data-price="350">
-      <div class="product-image"><img src="assets/product-amiri.jpg"><span class="badge yellow">New</span><button class="heart">♡</button></div>
-      <div class="product-body"><h3>Amiri Drip Tee</h3><strong>EGP 350</strong><div class="sizes"><button>M</button><button>L</button><button>XL</button><button>XXL</button></div><button class="buy" onclick="addToCart('Amiri Drip Tee',350)">♧ &nbsp; BUY NOW</button></div>
-    </article>
-  </div>
-</section>
-
-<section class="benefits">
-  <div><b>🚚</b><span>FAST DELIVERY<small>Across Egypt</small></span></div>
-  <div><b>📦</b><span>TRACK ORDER<small>Live Updates</small></span></div>
-  <div><b>🛡</b><span>SECURE PAYMENT<small>Cash / Vodafone Cash</small></span></div>
-  <div><b>★</b><span>CUSTOMER REVIEWS<small>Real Feedback</small></span></div>
-</section>
-</main>
-
-<div class="modal" id="searchModal"><div class="modal-box"><button class="close">×</button><h2>Search</h2><input id="searchInput" placeholder="ابحث عن منتج..."><div id="searchResults"></div></div></div>
-<div class="modal" id="cartModal"><div class="modal-box"><button class="close">×</button><h2>Cart</h2><div id="cartItems"></div><div class="total">Total: <b id="cartTotal">0</b> EGP</div><button class="yellow-btn full">CHECKOUT</button></div></div>
-
-<nav class="bottom-nav">
-  <a href="#home" class="active"><span>⌂</span><small>Home</small></a>
-  <a href="#collections"><span>▦</span><small>Categories</small></a>
-  <a href="#home" class="center-logo"><img src="assets/logo.png"></a>
-  <a href="#track"><span>□</span><small>Orders</small></a>
-  <a href="#account"><span>●</span><small>Account</small></a>
+<nav class="bottom-nav" aria-label="Main navigation">
+  <a href="#home"><span>⌂</span><small>Home</small></a>
+  <a href="#collection/new"><span>▦</span><small>Collections</small></a>
+  <a class="home-orb" href="#home" aria-label="Colombia Store"><span>CS</span></a>
+  <a href="#account"><span>◯</span><small>Account</small></a>
+  <a href="#track"><span>⌁</span><small>Track</small></a>
 </nav>
 
+<div class="modal" id="productModal">
+  <div class="modal-card">
+    <button class="close" id="closeModal">×</button>
+    <img id="modalImg" alt="">
+    <div class="modal-copy">
+      <p class="eyebrow" id="modalCollection"></p>
+      <h2 id="modalName"></h2>
+      <p id="modalDesc"></p>
+      <strong id="modalPrice"></strong>
+      <label>Size / المقاس
+        <select id="modalSize">
+          <option>M</option><option>L</option><option>XL</option><option>XXL</option>
+        </select>
+      </label>
+      <button class="primary" id="addBtn">Add to Cart</button>
+      <button class="primary outline" id="buyBtn">BUY NOW</button>
+    </div>
+  </div>
+</div>
+
+<div class="cart" id="cartPanel">
+  <button class="close" id="closeCart">×</button>
+  <p class="eyebrow">COLOMBIA STORE</p>
+  <h2>Cart</h2>
+  <div id="cartItems"></div>
+  <div class="cart-total">Total: <strong id="cartTotal">EGP 0</strong></div>
+  <button class="primary" id="checkoutBtn">BUY NOW</button>
+</div>
+
 <script src="app.js"></script>
-</body></html>
+</body>
+</html>
