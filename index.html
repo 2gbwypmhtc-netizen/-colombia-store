@@ -1,95 +1,10 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>COLOMBIA STORE</title>
-<meta name="description" content="COLOMBIA STORE — premium streetwear collections.">
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-<header class="nav">
-  <button class="icon-btn" id="menuBtn" aria-label="Open menu">☰</button>
-  <a class="brand" href="#home" aria-label="Colombia Store home">
-    <img class="brand-logo" src="colombia-logo.png" alt="Colombia Store logo">
-    <span>COLOMBIA STORE</span>
-  </a>
-  <div class="nav-actions">
-    <button class="icon-btn" id="searchBtn" aria-label="Search">⌕</button>
-    <a class="icon-btn" href="#account" aria-label="Account">◯</a>
-    <button class="icon-btn" id="cartBtn" aria-label="Cart">🛒<span class="badge" id="cartCount">0</span></button>
-  </div>
-</header>
-
-<aside class="drawer" id="drawer" aria-hidden="true">
-  <button class="close" id="closeDrawer" aria-label="Close menu">×</button>
-  <div class="drawer-brand"><img class="drawer-logo" src="colombia-logo.png" alt="Colombia Store logo"><b>COLOMBIA STORE</b></div>
-  <p class="drawer-label">COLLECTIONS</p>
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#collection/new">✨🔥 New Collection</a>
-    <a href="#collection/summer">☀️🌴 Summer Collection</a>
-    <a href="#collection/classic">👕🖤 Classic Collection</a>
-    <a href="#collection/bestsellers">🔥⭐ Best Sellers</a>
-    <a href="#collection/limited">💎✨ Limited Edition</a>
-  </nav>
-  <p class="drawer-label">CUSTOMER</p>
-  <nav>
-    <a href="#track">📦 Track Order</a>
-    <a href="#account">👤 Account</a>
-  </nav>
-</aside>
-<div class="shade" id="shade"></div>
-
-<div class="search-panel" id="searchPanel">
-  <div class="search-inner">
-    <button class="close" id="closeSearch" aria-label="Close search">×</button>
-    <p class="eyebrow">COLOMBIA STORE</p>
-    <h2>Search</h2>
-    <input class="input" id="searchInput" placeholder="Search product, color or collection">
-    <div id="searchResults" class="search-results"></div>
-  </div>
-</div>
-
-<main id="app"></main>
-
-<nav class="bottom-nav" aria-label="Main navigation">
-  <a href="#home"><span>⌂</span><small>Home</small></a>
-  <a href="#collection/new"><span>▦</span><small>Collections</small></a>
-  <a class="home-orb" href="#home" aria-label="Colombia Store"><img src="colombia-logo.png" alt="Colombia Store logo"></a>
-  <a href="#account"><span>◯</span><small>Account</small></a>
-  <a href="#track"><span>⌁</span><small>Track</small></a>
-</nav>
-
-<div class="modal" id="productModal">
-  <div class="modal-card">
-    <button class="close" id="closeModal">×</button>
-    <img id="modalImg" alt="">
-    <div class="modal-copy">
-      <p class="eyebrow" id="modalCollection"></p>
-      <h2 id="modalName"></h2>
-      <p id="modalDesc"></p>
-      <strong id="modalPrice"></strong>
-      <label>Size / المقاس
-        <select id="modalSize">
-          <option>M</option><option>L</option><option>XL</option><option>XXL</option>
-        </select>
-      </label>
-      <button class="primary" id="addBtn">Add to Cart</button>
-      <button class="primary outline" id="buyBtn">BUY NOW</button>
-    </div>
-  </div>
-</div>
-
-<div class="cart" id="cartPanel">
-  <button class="close" id="closeCart">×</button>
-  <p class="eyebrow">COLOMBIA STORE</p>
-  <h2>Cart</h2>
-  <div id="cartItems"></div>
-  <div class="cart-total">Total: <strong id="cartTotal">EGP 0</strong></div>
-  <button class="primary" id="checkoutBtn">BUY NOW</button>
-</div>
-
-<script src="app.js"></script>
-</body>
-</html>
+<!doctype html><html lang="ar" dir="rtl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>COLOMBIA_STORE | New Collection</title><link rel="stylesheet" href="style.css"></head><body>
+<header><a class="brand" href="#home"><img src="colombia-logo.png"><b>COLOMBIA_STORE</b></a><nav><a href="#home">الرئيسية</a><a href="#collection">الكوليكشن</a><a href="#about">عن المتجر</a><a href="#contact">تواصل معنا</a></nav><button class="menu">☰</button></header>
+<main><section id="home" class="hero"><div><small>COLOMBIA_STORE</small><h1>NEW<br>COLLECTION</h1><p>أحدث التيشيرتات المستوردة بخامات مميزة وتصميمات مختارة بعناية.</p><a class="btn" href="#collection">اكتشف الكوليكشن</a></div></section>
+<section id="collection" class="section"><div class="intro"><small>OUR COLLECTION</small><h2>أحدث الكوليكشن</h2><p>اختار القطعة المناسبة ليك واستمتع بتجربة شراء بسيطة وسريعة.</p></div><div class="products">
+<article><div class="pic">PRODUCT IMAGE</div><div class="info"><small>NEW COLLECTION</small><h3>Oversized T-Shirt</h3><p>M / L / XL / XXL</p><strong>350 EGP</strong></div></article>
+<article><div class="pic">PRODUCT IMAGE</div><div class="info"><small>IMPORTED</small><h3>Classic T-Shirt</h3><p>M / L / XL / XXL</p><strong>350 EGP</strong></div></article>
+<article><div class="pic">PRODUCT IMAGE</div><div class="info"><small>LIMITED</small><h3>Premium T-Shirt</h3><p>M / L / XL / XXL</p><strong>350 EGP</strong></div></article></div></section>
+<section id="about" class="about section"><div><small>COLOMBIA_STORE</small><h2>ستايلك يبدأ من هنا</h2><p>متجر متخصص في الملابس الرجالي المستوردة، مع اهتمام بالتفاصيل والخامة وتجربة العميل.</p></div><div class="features"><div>✓ خامات ممتازة</div><div>✓ مقاسات متعددة</div><div>✓ شحن لجميع محافظات مصر</div><div>✓ خدمة ما بعد البيع</div></div></section>
+<section id="contact" class="contact section"><small>CONTACT</small><h2>اطلب دلوقتي</h2><p>للطلب أو الاستفسار تواصل معنا على صفحاتنا.</p><div class="socials"><a href="#">Instagram</a><a href="#">Facebook</a><a href="#">TikTok</a></div></section></main>
+<footer>© 2026 COLOMBIA_STORE <span>Imported Fashion • Egypt</span></footer><script src="app.js"></script></body></html>
